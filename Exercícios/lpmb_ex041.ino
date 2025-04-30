@@ -11,7 +11,7 @@ void setup() {
   while (!Serial.available()) {
     
   }
-  String nome = Serial.readStringUntil('\n');  
+  String nome = Serial.readStringUntil('');  
 
   Serial.println("Digite o peso da pessoa (em kg):");
   while (!Serial.available()) {
