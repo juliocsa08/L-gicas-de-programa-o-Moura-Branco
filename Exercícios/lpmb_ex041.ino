@@ -1,40 +1,32 @@
 
- int pinoPeso = 0;  
-int pinoAltura = 1; 
-
-void setup() {
- 
-  Serial.begin(9600);
-  
-
-  Serial.println("Digite o nome da pessoa:");
-  while (!Serial.available()) {
-    
-  }
-  String nome = Serial.readStringUntil('');  
-
-  Serial.println("Digite o peso da pessoa (em kg):");
-  while (!Serial.available()) {
-
-  }
-  float peso = Serial.parseFloat();  
-  
-  
-  Serial.println("Digite a altura da pessoa (em metros):");
-  while (!Serial.available()) {
-
-  }
-  float altura = Serial.parseFloat();
-
-  float imc = peso / (altura * altura);
-
-  
-  Serial.print("Nome: ");
-  Serial.println(nome);
-  Serial.print("IMC: ");
-  Serial.println(imc);
+   String nome = "";
+  float peso = 0;
+float altura = 0;
+float  IMC = 0;
+void setup()
+{
+ Serial.begin(9600);
 }
-
-void loop() {
-
+void loop()
+{
+  //entrada
+  Serial.println("qual o seu nome");
+          while ( ! Serial.available());
+  nome = Serial.readString();
+ 
+        Serial.println("qual o seu peso");
+     while ( ! Serial.available());
+  peso = Serial.parseFloat();
+ 
+      Serial.println("qual o sua altura");
+  while ( ! Serial.available());
+        altura = Serial.parseFloat();
+ 
+  //porcessamento IMC = peso / (altura * altura);
+ 
+  //saída
+      Serial.println("seu nome: " + nome);
+       Serial.println("seu IMC: " + String(IMC));
+ 
+      delay(5000);
 }
