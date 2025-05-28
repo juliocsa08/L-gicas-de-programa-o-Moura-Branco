@@ -1,6 +1,6 @@
 #include <Servo.h>
 
-// Pinos
+
  int ledVermelho = 2;
  int ledVerde = 3;
  int ledsAzuis[] = {4, 5, 6};
