@@ -65,16 +65,16 @@ void loop() {
 }
 
 void iniciarNovaRodada() {
-  numeroSagrado = random(1, 7); // Número de 1 a 6
+  numeroSagrado = random(1, 7);
   Serial.println("Tente adivinhar o numero sagrado (1 a 6):");
 }
 
 void reiniciarDesafio() {
   acertos = 0;
   for (int i = 0; i < numeroJoias; i++) {
-    digitalWrite(ledsAzuis[i], LOW); // Apaga as joias
+    digitalWrite(ledsAzuis[i], LOW); 
   }
-  servo.write(0); // Fecha a porta
+  servo.write(0); 
   iniciarNovaRodada();
 }
 
